@@ -1,0 +1,192 @@
+/* =========================================
+   ADMIN LAYOUT
+========================================= */
+
+.admin-layout {
+  min-height: 100vh;
+
+  background: #f6f8fc;
+}
+
+
+/* MAIN */
+
+.admin-layout-main {
+  width: calc(100% - 280px);
+  min-height: 100vh;
+
+  margin-left: 280px;
+
+  background: #f6f8fc;
+  box-sizing: border-box;
+}
+
+
+/* PAGE CONTENT */
+
+.admin-page-content {
+  min-height: 100vh;
+
+  box-sizing: border-box;
+}
+
+/* Existing admin pages include their own sidebars. Use the shared layout sidebar instead. */
+.admin-layout .admin-dashboard-page {
+  display: block;
+  min-height: 100vh;
+}
+
+.admin-layout .admin-dashboard-page > .admin-sidebar,
+.admin-layout .admin-courses-page > .courses-sidebar,
+.admin-layout .admin-faculty-page > .faculty-sidebar,
+.admin-layout .admin-enquiries-page > .enquiry-sidebar {
+  display: none;
+}
+
+.admin-layout .admin-dashboard-page > .admin-main,
+.admin-layout .admin-courses-page > .courses-main,
+.admin-layout .admin-faculty-page > .faculty-main,
+.admin-layout .admin-enquiries-page > .enquiry-main {
+  width: 100%;
+  margin-left: 0;
+}
+
+
+/* =========================================
+   MOBILE HEADER
+========================================= */
+
+.admin-mobile-header {
+  display: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .admin-layout-main {
+    width: 100%;
+    margin-left: 0;
+
+    padding-top: 68px;
+  }
+
+
+  .admin-mobile-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border-bottom: 1px solid #e9edf3;
+
+    z-index: 900;
+
+    box-shadow:
+      0 3px 15px rgba(20, 30, 50, 0.05);
+  }
+
+
+  /* HAMBURGER */
+
+  .admin-hamburger {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #f1f3f8;
+
+    cursor: pointer;
+  }
+
+  .admin-hamburger span {
+    width: 20px;
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: #312563;
+  }
+
+
+  /* MOBILE BRAND */
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+  }
+
+  .mobile-brand-logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+      linear-gradient(
+        135deg,
+        #7550ff,
+        #9b32ff
+      );
+
+    color: white;
+
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .mobile-brand strong {
+    display: block;
+
+    color: #20184d;
+
+    font-size: 17px;
+  }
+
+  .mobile-brand small {
+    display: block;
+
+    margin-top: 1px;
+
+    color: #8d80b7;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+  }
+}
