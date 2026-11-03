@@ -37,7 +37,7 @@ const API_URL = (
 
 
 
-const IMG = "/images";
+const IMG = `${import.meta.env.BASE_URL}images`;
 
 
 
@@ -1776,7 +1776,7 @@ const handleInput = (e) => {
 
       <img
 
-        src="/images/about_campus.png"
+        src={`${IMG}/about_campus.png`}
 
         alt="EduNova Modern Campus"
 
@@ -2831,7 +2831,7 @@ const handleInput = (e) => {
         </div>
 
         <img
-          src="/images/faq_student.png"
+          src={`${IMG}/faq_student.png`}
           alt="Frequently Asked Questions"
         />
 
@@ -4033,11 +4033,11 @@ const handleInput = (e) => {
 
                 playsInline
 
-                poster="/images/about_campus.png"
+                poster={`${IMG}/about_campus.png`}
 
               >
 
-                <source src="/videos/campus-tour.mp4" type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}videos/campus-tour.mp4`} type="video/mp4" />
 
                 Your browser does not support video.
 
